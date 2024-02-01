@@ -1,100 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Hacker Settings</title>
     <meta>
     <link rel="stylesheet" href="main.css">
         
     <style>
-        
         body{
             margin: 0px;
             padding: 0px;
-       }
-
-       #header {
+        }
+        #header {
             background-color: pink;
             width: auto;
             height: 100px;
-            
             display: flex;
             align-items: center;
-
             margin-left: auto;
             margin-right: auto
-       }
-
-       h1 {
+        }
+        h1 {
             margin-left: auto;
             margin-right: auto;
-       }
-
-       #profile-pic {
-        height: 300px;
-        width: auto;
-       }
-
-       #circle {
-        width: 200px;
-        height: 200px;
-        position: relative; 
-        top: 50px;
-        margin-left: auto;
-        margin-right: auto;
-
-        border-radius: 50%;
-        overflow: hidden;
-       }
-
-       #circle img {
-        width: 200px;
-        height: 200px;
-       }
-
-       /* #info {
-        display: flex;
-        justify-content: center;
-       } */
-
-       .form-row  {
+        }
+        #profile-pic {
+            height: 300px;
+            width: auto;
+        }
+        #circle {
+            width: 200px;
+            height: 200px;
+            position: relative; 
+            top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        #circle img {
+            width: 200px;
+            height: 200px;
+        }
+        .form-row  {
             display: flex;
             margin: 5px 0px;
             position: relative;
             justify-content: center;
-       }
-
-       label {
-        margin: 0px 15px;
-       }
-
-       button {
-        margin: 0px 5px;
-       }
-
-       #edit-pic {
-        margin: 0px 0px 40px;
-        visibility: hidden;
-       }
-
+        }
+        label {
+            margin: 0px 15px;
+        }
+        button {
+            margin: 0px 5px;
+        }
+        #edit-pic {
+            margin: 0px 0px 40px;
+            visibility: hidden;
+        }
     </style>
-
 </head>
 <body>
     <div id="content">
         <div id="header">
             <h1>Hacker Settings</h1>
         </div>
+        <!-- #header -->
         <div id="profile-pic">
             <div id="circle">
                 <img src="https://www.akc.org/wp-content/uploads/2018/05/Three-Australian-Shepherd-puppies-sitting-in-a-field.jpg">
             </div>
         </div>
+        <!-- #profile-pic -->
         <div id="input">
             <div id="edit-pic" class="form-row">
                 <label for="url-id">URL:</label>
                 <input type="text" id="url-id" placeholder="png, jpg, jpeg">
                 <button id="save-0">Save</button>
             </div>
+            <!-- #edit-pic -->
             <div class="form-row">
                 <label for="name-id">Name:</label>
                 <span id="name-input">Tommy Trojan</span>
@@ -108,10 +91,11 @@
                 <button id="save-2">Save</button>
             </div>
         </div>
+        <!-- #input -->
     </div>
+    <!-- #content -->
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
     <script>
         // Edit Button (Name)
         $('#edit-1').click(function(){
@@ -149,9 +133,6 @@
 			$('#circle > img').attr('src', urlInput);
             $('#edit-pic').css('visibility', 'hidden');
         });
-
-        
     </script>
-
 </body>
 </html>
