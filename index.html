@@ -4,28 +4,142 @@
     <title></title>
     <meta>
     <link rel="stylesheet" href="main.css">
-
+        
     <style>
-        #header{
-            background-color: orange;
-            width: 700px;
-            height: 700px;
-        }
+        
+        body{
+        margin: 0px;
+        padding: 0px;
+       }
 
-        /* Mobile: Screen Sizes <= 767px */
-        /* Ref: lecture 8 */
-		@media (max-width: 575px) {
-            #header{
-                background-color: purple;
-            }
-        }
+       /* #content {
+        display: flex;
+        flex-direction: column;
+       } */
+
+       #header {
+        background-color: pink;
+        width: auto;
+        height: 100px;
+        
+        display: flex;
+        align-items: center;
+
+        margin-left: auto;
+        margin-right: auto
+       }
+
+       h1 {
+        margin-left: auto;
+        margin-right: auto;
+       }
+
+       #profile-pic {
+        /* background-color: aqua; */
+        height: 300px;
+        width: auto;
+        /* position: absolute; */
+       }
+
+       #circle {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        position: relative; 
+        top: 50px;
+        left: 50px;
+
+        border-radius: 50%;
+        overflow: hidden;
+       }
+
+       #circle img {
+        width: 200px;
+        height: 200px;
+       }
+
+       #info {
+        /* background-color: greenyellow; */
+        
+       }
+
+       .form-row  {
+            display: flex;
+            margin: 5px 0px;
+            /* margin: 0px 5px; */
+       }
+
+       label {
+        margin: 0px 15px;
+       }
+
+       button {
+        margin: 0px 5px;
+       }
+
+    
 
     </style>
 
 </head>
 <body>
-    <div id="header">Hello World</div>
+    <div id="content">
+        <div id="header">
+            <h1>Hacker Settings</h1>
+        </div>
+        <div id="profile-pic">
+            <div id="circle">
+                <img src="https://www.akc.org/wp-content/uploads/2018/05/Three-Australian-Shepherd-puppies-sitting-in-a-field.jpg">
+            </div>
+        </div>
+        <div id="info">
+            <div id="input">
+                <div class="form-row">
+                    <label for="name-id">Name:</label>
+                    <span id="name-input">Kristi Wu</span>
+                    <button id="edit-1">Edit</button>
+                    <button id="save-1">Save</button>
+                </div>
+                <div class="form-row">
+                    <label for="email-id">Email:</label>
+                    <span id="email-input">kawu@usc.edu</span>
+                    <!-- <input type="email" id="email-id" placeholder="ttrojan@usc.edu"> -->
+                    <button id="edit-2">Edit</button>
+                    <button id="save-2">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        // Edit Button (Name)
+        $('#edit-1').click(function(){
+			$('#name-input').html('<input type="text" id="name-id" placeholder="First Last">');
+        });
+
+        // Save Button (Name)
+        $('#save-1').click(function(){
+            // get input
+			var nameInput = $('#name-input input').val();
+			$('#name-input').html(nameInput);
+        });
+
+        // Edit Button (Email)
+        $('#edit-2').click(function(){
+			$('#email-input').html('<input type="email" id="email-id" placeholder="ttrojan@usc.edu">');
+        });
+
+        // Save Button (Email)
+        $('#save-2').click(function(){
+            // get input
+			var emailInput = $('#email-input input').val();
+			$('#email-input').html(emailInput);
+        });
+
+        
+    </script>
 
 </body>
 </html>
